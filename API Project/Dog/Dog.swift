@@ -8,8 +8,8 @@
 import Foundation
 import UIKit
 
-struct Dog {
-    var dogPicture: UIImage
+struct Dog: Codable {
+    var dogPicture: String
     
     enum CodingKeys: String, CodingKey {
         case dogPicture = "message"

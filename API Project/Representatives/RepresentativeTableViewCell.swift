@@ -16,12 +16,11 @@ class RepresentativeTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func update(with representative: Representative) {
+        nameLabel.text = representative.name
+        politicalPartyLabel.text = representative.party
+        linkLabel.text = representative.link.absoluteString
     }
-
 }
